@@ -57,4 +57,5 @@ class Beer extends Beverage{
     $Duvel = new Beer('blond',3.5,'duvel','8.5');
     echo "<br/>Alcohol percentage by using function = ".$Duvel->getAlcoholPercentage();
     echo "<br/>Alcohol percentage by accesing property name = ".$Duvel->alcoholPercentage;
+    echo "<br/> try to generate error = <br/>".$cola->getAlcoholPercentage();
 ?>

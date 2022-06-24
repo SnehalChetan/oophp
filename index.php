@@ -20,8 +20,11 @@ if(isset($_GET['page'])){
         case 'public' : 
             require 'public.php';
             exit;
-        case 'protected' : 
-            require 'protected.php';
+        case 'const' : 
+            require 'const.php';
+            exit;
+        case 'static' : 
+            require 'static.php';
             exit;
         case 'default' : 
             require 'Please display correct page';
@@ -60,6 +63,12 @@ if(isset($_GET['page'])){
             </div>
             <div class="row py-2">
                 <button class="btn border-primary" type="page" id="page" name="page" value="public">Ex 5 : Public Exercise</button>
+            </div>
+            <div class="row py-2">
+                <button class="btn border-primary" type="page" id="page" name="page" value="const">Ex 6 : Const Exercise</button>
+            </div>
+            <div class="row py-2">
+                <button class="btn border-primary" type="page" id="page" name="page" value="static">Ex 7 : Static Exercise</button>
             </div>
             </form>
         </div>

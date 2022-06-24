@@ -95,6 +95,10 @@ public function __construct($color,$price,$beerName, $alcoholPercentage)
 * Create a getter method to get child class property value.
 * Generate an error to understand ` parent class object can not access the child class properties as well as methods`.
 
+### Link to code
+* [Exercise 2 : Extending](https://github.com/SnehalChetan/oophp/blob/main/extending.php "Exercise 2 : Extending")
+
+
 ## Exercise 3 : Private
 * Constructor method can not be private.
 * You can not access the private properties you need the public getter and setter methods.
@@ -112,6 +116,9 @@ but try the same outside class definition it gives error and need getter method 
 ```php
 $Duvel->getAlcoholPercentage(); 
 ```
+### Link to code
+* [Exercise 3 : Private](https://github.com/SnehalChetan/oophp/blob/main/private.php "Exercise 3 : Private")
+
 
 ## Exercise 4 : Protected
 * The protected properties of a class can only be accessed outside by the class itself and it's direct child classes.
@@ -129,3 +136,70 @@ $Duvel->alcoholPercentage
 $Duvel->getAlcoholPercentage(); 
 ``` 
 to access it.
+
+### Link to code
+* [Exercise 4 : Protected](https://github.com/SnehalChetan/oophp/blob/main/protected.php "Exercise 4 : Protected")
+
+
+## Exercise 5 : Public
+* Access the private properties without using getter and setter method. 
+* To do that need to use the public method to assign the value to private property and return the newly changed value.
+
+### Exercise 5 : Public Description
+* Write a method to change property value
+```php
+    public function changePrice(float $price) : string{
+        if ($price > 0){
+            $this->price = $price;
+            return "price of <b>".$this->price;
+        }
+        return 'price can\'t be negetive or 0!';
+    }
+```
+
+### Link to code
+* [Exercise 5 Public](https://github.com/SnehalChetan/oophp/blob/main/public.php "Exercise 5 Public")
+
+## Exercise 6 : Const
+
+### Class Constants
+* Class constants are define within class using `const` keyword.
+* These are case sensitive.
+* Syntax of class constant variable
+```php
+class ClassName{
+    const CONST_VARIABLE = "Het Vervolg";
+}
+```
+* To access this constant variable, there are 3 options
+    1. Access constant inside class method using `self` and `scope resolution operator (::)` as,
+    ```php
+     public function showConstant():string {
+        return  self::CONST_VARIABLE;
+    }
+    ```
+    call this method using same class object and child class object.
+    2. Access constant outside class using `classname` and `scope resolution operator (::)` as ,
+    ```php
+    echo ClassName::CONST_VARIABLE;
+    ```
+    3. Also access by assigning classname as a value to a variable as,
+    ```php
+    $classname = "ClassName";
+    echo $classname::CONST_VARIABLE;
+    ```
+* Access a parent class constant in child method using `parent` keyword and `::` as,
+```php
+public function getParentConstant():string{
+      return  parent::CONST_VARIABLE;
+   }
+```
+* Access the method using child class object
+    
+### Exercise 5 : Const Description
+ * Create a const variable in a parent class and display it using parent class name.
+ * Display parent class constant using child class object and method.
+ 
+### Link to code
+* [Exercise 6 Const](https://github.com/SnehalChetan/oophp/blob/main/const.php "Exercise 6 Const")
+

@@ -257,11 +257,12 @@ echo "<br/><br/> Display using <b> child class method and object  </b> = ".$Duve
  * declare and define static property address to parent class.
  * Display this static property using parent class name and child class name
  ```php
-    echo "<br/>Static property display using <b> class name </b>".Beverage::$address;
-    echo "<br/>Display static property using a simple<b> public method and object </b> = ".$cola->getStaticProperty();
-    echo "<br/>Display using <b> class name variable </b> = ".$classname::$address;
-    echo "<br/>Display using <b> child class name  </b> = ".Beer::$address;
-    echo "<br/>Display using <b> child class method and object  </b> = ".$Duvel->getParentStaticProperty(); 
+    echo " Display Static property";
+    echo "\n Using class name = ".Beverage::$address;
+    echo "\n Using a simple public method and object = ".$cola->getStaticProperty();
+    echo "\n Usingclass name variable = ".$classname::$address;
+    echo "\n Using child class name = ".Beer::$address;
+    echo "\n Using child class method and object = ".$Duvel->getParentStaticProperty(); 
 ```
 ### Link to code
 * [Exercise 7 Static](https://github.com/SnehalChetan/oophp/blob/main/const.php "Exercise 7 Static")

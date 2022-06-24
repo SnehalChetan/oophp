@@ -29,6 +29,8 @@ public function __construct(string $name){
 
 #### Object
 * Object is an instance or blueprint of a class
+* To create a new object a class called Instantiation.
+* Or It is the process of creating an instance of an object in memory
 
 #### Constructor
 * constructor called evry time a new object of class will be created or ininitialised.
@@ -160,11 +162,13 @@ to access it.
 ### Link to code
 * [Exercise 5 Public](https://github.com/SnehalChetan/oophp/blob/main/public.php "Exercise 5 Public")
 
+
 ## Exercise 6 : Const
 
 ### Class Constants
 * Class constants are define within class using `const` keyword.
 * These are case sensitive.
+* Don't need the access modifier (public,private,protected) to declare
 * Syntax of class constant variable
 ```php
 class ClassName{
@@ -196,10 +200,63 @@ public function getParentConstant():string{
 ```
 * Access the method using child class object
     
-### Exercise 5 : Const Description
+### Exercise 6 : Const Description
  * Create a const variable in a parent class and display it using parent class name.
  * Display parent class constant using child class object and method.
- 
+
 ### Link to code
 * [Exercise 6 Const](https://github.com/SnehalChetan/oophp/blob/main/const.php "Exercise 6 Const")
+
+
+## Exercise 7 Static
+* Declaring class properties or methods as static allow to acces them statically without needing an instantiation of the class. 
+* We can not use the pseudo-variable (`$this`) inside `static methods`. Because we can access them using classname only.
+
+### Static Properties
+* To declare a static property we need to use `static` keyword
+* To access static properties we don't require an class object, we can access them using the `class name` and `::`
+* Use access modifiers (public, private, protected)
+```php
+class ClassName {
+    public static $staticProperty = 'address';
+}
+```
+* Access or Display value of a static property ouside of class as,
+    1. Using class name and scope resolution operator as,
+    ```php
+        echo  ClassName::$staticProperty;
+    ```
+    2. To access static property in class method we need to use `self` keyword and call the method using class object,
+    ```php
+    public function getStaticProperty(){
+        return self::$staticProperty;
+    }
+    echo $classObject->getStaticProperty();
+    ```
+    3. The Parent static property can be accessed using the child class name as,
+    ```php
+        echo ChildClassName::$staticProperty;
+        //OR
+        echo ChildClassName::$parentStaticProperty;
+    ```
+    4. To access and display parent class static property in child class method you need to use `parent` keyword as,
+    ```php
+        public function getParentStaticProperty(){
+            return parent::$staticProperty;
+        }
+        echo $childObject->getParentStaticProperty();
+    ```
+
+
+echo "<br/><br/> Display using <b> class name variable </b> = ".$classname::$address;
+echo "<br/><br/> Display using <b> child class name  </b> = ".Beer::$address;
+echo "<br/><br/> Display using <b> child class method and object  </b> = ".$Duvel->getParentStaticProperty();
+
+
+### Exercise 7 : Static Description
+ * declare and define static property address to parent class.
+ * Display this static property using parent class name and child class name
+ 
+### Link to code
+* [Exercise 7 Static](https://github.com/SnehalChetan/oophp/blob/main/const.php "Exercise 7 Static")
 

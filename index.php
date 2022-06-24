@@ -14,8 +14,8 @@ if(isset($_GET['page'])){
         case 'private' : 
             require 'private.php';
             exit;
-        case 'extending' : 
-            require 'extending.php';
+        case 'protected' : 
+            require 'protected.php';
             exit;
         case 'default' : 
             require 'Please display correct page';
@@ -47,11 +47,11 @@ if(isset($_GET['page'])){
             <button class="btn border-primary" type="page" id="page" name="page" value="extending">Ex 2 : Extending Exercise</button>
             </div>
             <div class="row py-2">
-                <button class="btn border-primary" type="page" id="page" name="page" value="private">Ex 2 : Private Exercise</button>
+                <button class="btn border-primary" type="page" id="page" name="page" value="private">Ex 3 : Private Exercise</button>
             </div>
-            <!-- <div class="row">
-                <button class="btn border-primary" type="page" id="page" name="page" value="classes">Classes Exercise</button>
-            </div> -->
+            <div class="row">
+                <button class="btn border-primary" type="page" id="page" name="page" value="protected">Ex 4 : Protected Exercise</button>
+            </div>
             </form>
         </div>
     </div>

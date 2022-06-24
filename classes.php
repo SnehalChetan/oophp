@@ -38,3 +38,6 @@ class Beverage{
     echo $cola->getInfo();
     echo "<br>Temparature of  $cola->name is ".$cola->temperature;
 ?>
+
+<br/><br/>
+<button class="btn border-primary" onclick="history.go(-1);">Back </button>

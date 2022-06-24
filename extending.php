@@ -15,7 +15,11 @@ Make sure that each print is on a different line.
 Try to get this error on the screen= Fatal error: Uncaught Error: Call to undefined method Beverage::getAlcoholPercentage() in /var/www/becode/workshop/exercise2.php on line 64
 USE TYPEHINTING EVERYWHERE!
 */
-echo "extending";
+echo "Extending Exercise ";
+?>
+<br/>
+<button class="btn border-primary" onclick="history.go(-1);">Back </button><br/><br/>
+<?php
 class Beverage{
     
     public string $name;
@@ -45,7 +49,7 @@ class Beer extends Beverage{
         $this->beerName = $beerName;
         $this->alcoholPercentage = $alcoholPercentage;
     }
-   public function getAlcoholPercentage():string{
+   public function getAlcoholPercentage():float{
         return $this->alcoholPercentage;
    }
 }
@@ -54,8 +58,9 @@ class Beer extends Beverage{
     echo $cola->getInfo();
     echo "<br>Temparature of  $cola->name is ".$cola->temperature;
     //TODO: Instantiate an object which represents Duvel. Make sure that the color is set to blond, the price equals 3.5 euro and the temperature to cold automatically.
-    $Duvel = new Beer('blond',3.5,'duvel','8.5');
+    $Duvel = new Beer('blond',3.5,'duvel',8.5);
     echo "<br/>Alcohol percentage by using function = ".$Duvel->getAlcoholPercentage();
     echo "<br/>Alcohol percentage by accesing property name = ".$Duvel->alcoholPercentage;
     echo "<br/> try to generate error = <br/>".$cola->getAlcoholPercentage();
 ?>
+

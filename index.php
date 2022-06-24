@@ -11,6 +11,12 @@ if(isset($_GET['page'])){
         case 'extending' : 
             require 'extending.php';
             exit;
+        case 'private' : 
+            require 'private.php';
+            exit;
+        case 'extending' : 
+            require 'extending.php';
+            exit;
         case 'default' : 
             require 'Please display correct page';
             exit;

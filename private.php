@@ -58,6 +58,11 @@ class Beer extends Beverage{
    public function getAlcoholPercentage():float{
         return $this->alcoholPercentage;
    }
+   //Create a new private method in the Beer class called beerInfo which returns "Hi i'm Duvel and have an alcochol percentage of 8.5 and I have a light color."
+   public function beerInfo() : string{
+
+    return "Hi i'm <b>".$this->beerName." </b> and have an alcochol percentage of <b> ".$this->alcoholPercentage." </b> and I have a <b>light</b> color.";
+   }
    
 }
 
@@ -68,7 +73,7 @@ class Beer extends Beverage{
     $Duvel->setColor('light');
     
     echo "<br/> The color of  Duvel is <b>". $Duvel->getColor()." </b> before changes";
-
+    echo " <br/> ".$Duvel->beerInfo();
    
 ?>
 <br/><br/>
